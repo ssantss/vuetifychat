@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-center mt-5">Chat</h1>
+  <h1 class="text-center font-weight-medium">Chat</h1>
   <v-card
     v-for="item in messages"
     :key="item.id"
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { collection, query, onSnapshot,orderBy } from "firebase/firestore";
+import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import { ref } from "vue";
 const userChat = ref(auth.currentUser);

@@ -5,14 +5,14 @@
       <v-app-bar-title>VuetifyChat</v-app-bar-title>
 
       <v-btn
-        prepend-icon="mdi-google-downasaur"
+        prepend-icon="mdi-login-variant"
         color="whithe"
         @click="googleAccess"
         v-if="!userGoogle"
         >Acceder</v-btn
       >
       <v-btn
-        prepend-icon="mdi-google-downasaur"
+        prepend-icon="mdi-logout-variant"
         color="whithe"
         @click="Logout"
         v-if="userGoogle"
@@ -24,14 +24,16 @@
       <v-container>
         <Chat v-if="userGoogle" />
         <div v-else>
-          <h1 class="text-center mt-15">
-            Debes inicicar seccion para ver los chats
-          </h1>
+          <v-alert prominent type="error" variant="outlined">
+            Debes iniciar sección para ingresar al chat
+          </v-alert>
         </div>
       </v-container>
     </v-main>
 
-    <v-footer class="d-flex flex-column" app> <FormAdd /> </v-footer>
+    <v-footer class="d-flex flex-column" app v-if="userGoogle !== false">
+      <FormAdd />
+    </v-footer>
   </v-app>
 </template>
 

@@ -27,6 +27,7 @@ const SendMessage = async () => {
       time: Date.now(),
       uid: auth.currentUser.uid,
       displayName: auth.currentUser.displayName,
+      email: auth.currentUser.email,
     });
 
     message.value = "";
