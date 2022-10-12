@@ -11,7 +11,7 @@
   >
     <div class="d-flex flex-no-wrap justify-flex-end">
       <v-avatar
-        class="mt-2 ml-4"
+        class="mt-2 ml-2"
         color="grey-darken-3"
         :image="item.avatar"
       ></v-avatar>
@@ -21,30 +21,6 @@
     </div>
     <v-card-text>{{ item.text }}</v-card-text>
   </v-card>
-
-  <!-- v-card
-    v-for="item in messages"
-    :key="item.id"
-    class="mx-auto mb-3"
-    theme="dark"
-    max-width="300"
-    :class="item.uid === userChat.uid && 'ml-auto'"
-    :color="item.uid === userChat.uid ? 'success' : 'black'"
-  >
-    <v-list-item>
-      <v-list-item-avatar>
-        <v-avatar
-          color="grey-darken-3"
-          image="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-        ></v-avatar>
-        <v-list-item-title>{{ item.displayName }}</v-list-item-title>
-      </v-list-item-avatar>
-    </v-list-item>
-
-    <v-card-text class="font-weight-regular">
-      {{ item.text }}
-    </v-card-text>
-  </v-card> -->
 </template>
 
 <script setup>

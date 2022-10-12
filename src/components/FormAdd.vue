@@ -8,6 +8,7 @@
       append-icon="mdi-send"
       @click:append="SendMessage"
       v-model="message"
+      required
     ></v-text-field>
     <!-- el appen es el evento del click y el vmodel es el que lo hace reactivo   -->
   </v-form>
