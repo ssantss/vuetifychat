@@ -4,13 +4,47 @@
     v-for="item in messages"
     :key="item.id"
     width="300"
-    :subtitle="item.displayName"
-    :text="item.text"
     class="mb-3"
     :class="item.uid === userChat.uid && 'ml-auto'"
     :color="item.uid === userChat.uid ? 'success' : 'black'"
     theme="dark"
-  ></v-card>
+  >
+    <div class="d-flex flex-no-wrap justify-flex-end">
+      <v-avatar
+        class="mt-2 ml-4"
+        color="grey-darken-3"
+        :image="item.avatar"
+      ></v-avatar>
+      <v-card-subtitle class="mt-5 ml-n3">{{
+        item.displayName
+      }}</v-card-subtitle>
+    </div>
+    <v-card-text>{{ item.text }}</v-card-text>
+  </v-card>
+
+  <!-- v-card
+    v-for="item in messages"
+    :key="item.id"
+    class="mx-auto mb-3"
+    theme="dark"
+    max-width="300"
+    :class="item.uid === userChat.uid && 'ml-auto'"
+    :color="item.uid === userChat.uid ? 'success' : 'black'"
+  >
+    <v-list-item>
+      <v-list-item-avatar>
+        <v-avatar
+          color="grey-darken-3"
+          image="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+        ></v-avatar>
+        <v-list-item-title>{{ item.displayName }}</v-list-item-title>
+      </v-list-item-avatar>
+    </v-list-item>
+
+    <v-card-text class="font-weight-regular">
+      {{ item.text }}
+    </v-card-text>
+  </v-card> -->
 </template>
 
 <script setup>
